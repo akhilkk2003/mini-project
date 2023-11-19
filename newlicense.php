@@ -99,7 +99,7 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST["ADD_DATE"]))) {
     if ($conn->query($sql) === TRUE) {
         $email=$_SESSION['email'];
         
-        email('Date Confirmed','Your Leraners Test Date is Successfully Booked',$email);
+        email('Date Confirmed','Your Leaners Test Date is Successfully Booked',$email);
         echo '<script>
         var confirmed = confirm("We have received your concerned Dates and the Approved Date will be updated through Email");
         if (confirmed) {
@@ -257,7 +257,7 @@ $conn->close();
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="background-color: #303134;margin-top: -2px;">
         <a href="index.php" class="navbar-brand d-flex align-items-center border-end px-4  px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-car text-primary me-2 "></i>Driving</h2>
+            <h2 class="m-0 text-primary"><i class="fa fa-car text-primary me-2 "></i>Drivin</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -267,7 +267,8 @@ $conn->close();
                 <a href="index.php" class="nav-item nav-link active">Home</a>
                 <a href="index.php#about" class="nav-item nav-link">About</a>
                 <a href="index.php#course" class="nav-item nav-link">Courses</a>
-                <a href="newlicense.php?flag=<?= 1 ?>"class="nav-item nav-link">New License</a>
+                <a href="newlicense.php?flag=<?= 1 ?>" class="nav-item nav-link">New License</a>
+
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other Services</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -277,6 +278,7 @@ $conn->close();
                     </div>
                 </div>
                 <a href="index.php#trainers" class="nav-item nav-link">Our Trainers</a>
+                <a href="index.php#feedback" class="nav-item nav-link">Feedbacks</a>
                 <!--<div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -287,13 +289,13 @@ $conn->close();
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>-->
-                <!--<a href="contact.html" class="nav-item nav-link">Contact</a>-->
+                <a href="appointment.php" class="nav-item nav-link">Book Class Slot</a>
             </div>
             <?php if (isset($_SESSION['name'])) { ?>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="img/icons8-person-30.png" class="btn-primary img-fluid icon" alt=""></a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="feature.html" class="dropdown-item"><?php echo $_SESSION['name']; ?></a>
+                        <a href="user-profile.php" class="dropdown-item"><?php echo $_SESSION['name']; ?></a>
                         <a href="signout.php" class="dropdown-item">Signout</a>
 
                     </div>

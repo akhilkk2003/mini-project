@@ -23,6 +23,8 @@ if (isset($_POST["signup"])) {
                 $sql = "INSERT INTO tbl_users (user_name, user_email, password) VALUES ('$name', '$email', '$password')";
 
                 if (mysqli_query($conn, $sql)) {
+                    $userid=mysqli_insert_id($conn);
+                    $_SESSION["id"] = $userid;
                     $_SESSION["name"] = $name;
                     $_SESSION["email"] = $email;
                     $_SESSION["password"] = $password;

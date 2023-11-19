@@ -23,7 +23,7 @@ function fetchemail($conn, $id)
 
 function fetchdata($conn, $tablename)
 {
-    $sql = "SELECT * FROM $tablename";
+    $sql = "SELECT * FROM $tablename ORDER BY learner_id DESC";
     $result = $conn->query($sql);
 
     $data = array(); // Initialize an empty array to store the data

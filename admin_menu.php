@@ -1,7 +1,7 @@
-<?php
-session_start();
-include("connection.php");
-?>
+    <?php
+    session_start();
+    include("connection.php");
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,16 +42,20 @@ include("connection.php");
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="dashboard_mainpage.php" class="nav-item nav-link active">Dashboard</a>
-                <div class="nav-item dropdown">
+                <a href="add_new_license.php" class="nav-item nav-link ">Add-New licence</a>
+                <a href="add_services.php" class="nav-item nav-link ">Other-services</a>
+               <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">services</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="add_new_license.php" class="dropdown-item">Add-New licence</a>
                         <a href="add_services.php" class="dropdown-item">Other-services</a>
                         
                     </div>
-                </div>
+                </div>-->
                 
                 <a href="instructors.php" class="nav-item nav-link text-uppercase">Instructors</a>
+              
+                <a href="user-appointments.php" class="nav-item nav-link text-uppercase">Appointments</a>
                 <a href="feedback.php" class="nav-item nav-link text-uppercase">Feedbacks</a>
                 <!--<div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>

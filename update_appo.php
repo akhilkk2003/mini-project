@@ -38,7 +38,7 @@ if ((isset($_POST['book_now']))) {
     $email = $_SESSION['email'];
     $password = $_SESSION['password'];
 
-    $userId = userId($username, $email, $password);
+    $userId = $_SESSION['id'];
 
     $sql = "SELECT * FROM tbl_learners_details WHERE user_id = ? AND package_id=? ";
     $stmt = $conn->prepare($sql);
@@ -67,8 +67,6 @@ if ((isset($_POST['book_now']))) {
                 $stmt2 = $conn->prepare($sql);
                 $stmt2->bind_param("iisssss", $learner_id, $instructor, $email, $course, $section, $selectedTimeSlot, $appointmentDate);
 
-                // You may need to determine the patient_id based on the email or other criteria.
-                // For this example, I'm assuming you have a patients table with an email column.
 
 
 
@@ -93,7 +91,7 @@ if ((isset($_POST['book_now']))) {
             }
         }
     } else {
-        echo "first select the course and then book ";
+        echo "first select the course and then book $course $userId ";
     }
 }
 ?>

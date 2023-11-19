@@ -128,7 +128,7 @@ if (isset($_POST['Submit_feedback'])) {
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0" style="background-color: #303134;margin-top: -2px;">
-        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4  px-lg-5">
+        <a href="index.php" class="navbar-brand d-flex align-items-center border-end px-4  px-lg-5">
             <h2 class="m-0 text-primary"><i class="fa fa-car text-primary me-2 "></i>Drivin</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -150,6 +150,7 @@ if (isset($_POST['Submit_feedback'])) {
                     </div>
                 </div>
                 <a href="#trainers" class="nav-item nav-link">Our Trainers</a>
+                <a href="#feedback" class="nav-item nav-link">Feedbacks</a>
                 <!--<div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -526,7 +527,7 @@ if (isset($_POST['Submit_feedback'])) {
         </div>
     </div>
     <!-- Testimonial Start -->
-    <div class="container-xxl py-6">
+    <div class="container-xxl py-6" id="feedback">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h6 class="text-primary text-uppercase mb-2">Testimonial</h6>

@@ -29,7 +29,7 @@ if (isset($_SESSION["message2"])) {
     
 </head>
 
-<body>
+<body style="background-image: url('img/signup.jpeg'); background-size: cover; /* or 'contain' based on your preference */ background-repeat: no-repeat; background-position: center center;">
     <div class="modal" id="message-modal">
         <div class="modal-content"> 
             <span class="close" onclick="closeModal()">&times;</span>
@@ -40,9 +40,7 @@ if (isset($_SESSION["message2"])) {
     </div>
     <center>
 
-        <a href="https://front.codes/" class="logo" target="_blank">
-            <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
-        </a>
+       
 
         <div class="section">
             <div class="container">
@@ -52,7 +50,8 @@ if (isset($_SESSION["message2"])) {
                             <h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
                             <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
                             <label for="reg-log"></label>
-                            <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrap mx-auto" style="   margin-left: 1070px;margin-top: 145px;">
+     
                                 <div class="card-3d-wrapper">
                                     <div class="card-front">
                                         <div class="center-wrap">
@@ -60,11 +59,11 @@ if (isset($_SESSION["message2"])) {
                                                 <form action="api.php" method="POST">
                                                     <h4 class="mb-4 pb-3">Log In </h4>
                                                     <div class="form-group">
-                                                        <input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                                        <input type="email" name="email" class="form-style" style=" padding-left: 72px; margin-bottom: 9px;" placeholder="Your Email" id="logemail" autocomplete="off">
                                                         <i class="input-icon uil uil-at"></i>
                                                     </div>
                                                     <div class="form-group mt-2">
-                                                        <input type="password" name="password" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                                        <input type="password" name="password" class="form-style" style=" padding-left: 72px; margin-bottom: 9px;" placeholder="Your Password" id="logpass" autocomplete="off">
                                                         <i class="input-icon uil uil-lock-alt"></i>
                                                     </div><br><br>
                                                     <input type="submit" href="#" name="login" class="btn mt-4" value="submit">

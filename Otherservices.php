@@ -150,9 +150,10 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['service']))) {
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link active">Home</a>
-                <a href="index.php" class="nav-item nav-link">About</a>
-                <a href="index.php" class="nav-item nav-link">Courses</a>
-                <a href="index.php" class="nav-item nav-link">New License</a>
+                <a href="index.php#about" class="nav-item nav-link">About</a>
+                <a href="index.php#course" class="nav-item nav-link">Courses</a>
+                <a href="newlicense.php?flag=<?= 1 ?>" class="nav-item nav-link">New License</a>
+
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other Services</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -161,7 +162,8 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['service']))) {
 
                     </div>
                 </div>
-                <a href="index.php" class="nav-item nav-link">Our Trainers</a>
+                <a href="index.php#trainers" class="nav-item nav-link">Our Trainers</a>
+                <a href="index.php#feedback" class="nav-item nav-link">Feedbacks</a>
                 <!--<div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
@@ -172,15 +174,13 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['service']))) {
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>-->
-                <!--<a href="index.php" class="nav-item nav-link">Contact</a>-->
+                <a href="appointment.php" class="nav-item nav-link">Book Class Slot</a>
             </div>
             <?php if (isset($_SESSION['name'])) { ?>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><img src="img/icons8-person-30.png" class="btn-primary img-fluid icon" alt=""></a>
                     <div class="dropdown-menu bg-light m-0">
-                        <a href="feature.html" class="dropdown-item">
-                            <?php echo $_SESSION['name']; ?>
-                        </a>
+                        <a href="user-profile.php" class="dropdown-item"><?php echo $_SESSION['name']; ?></a>
                         <a href="signout.php" class="dropdown-item">Signout</a>
 
                     </div>
@@ -194,7 +194,6 @@ if (($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['service']))) {
         </div>
     </nav>
     <!-- Navbar End -->
-
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-6 my-6 mt-0 wow fadeIn" data-wow-delay="0.1s">
