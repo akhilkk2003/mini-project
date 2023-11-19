@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 18, 2023 at 12:20 AM
+-- Generation Time: Nov 19, 2023 at 01:03 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,11 +45,7 @@ CREATE TABLE `tbl_appointments` (
 --
 
 INSERT INTO `tbl_appointments` (`appointment_id`, `learner_id`, `user_email`, `service_id`, `instructor_id`, `section`, `appointment_time`, `status`, `classneed_date`, `created_at`) VALUES
-(1, 8, '', 22, '', '', '12', 'Active', '09-05-2023', '2023-09-07 15:48:38'),
-(4, 9, '', 26, '', '', '11', 'pending', '04-06-2023', '2023-09-19 15:10:33'),
-(5, 3, 'arav@gmail.com', 2, '26', 'evening', '4:20PM-4:35PM', 'pending', '2023-10-16', '2023-10-14 10:30:31'),
-(6, 44, 'akhilachu200313@gmail.com', 1, '22', 'undefined', 'undefined', 'pending', '2023-11-22', '2023-11-17 19:41:19'),
-(7, 44, 'akhilachu200313@gmail.com', 1, '22', 'evening', '5:30PM-6:00PM', 'pending', '2023-11-29', '2023-11-17 19:41:34');
+(9, 49, 'akhilkk200313@gmail.com', 1, '22', 'evening', '5:30PM-6:00PM', 'approved', '2023-11-23', '2023-11-18 22:07:23');
 
 -- --------------------------------------------------------
 
@@ -160,7 +156,7 @@ CREATE TABLE `tbl_learners_details` (
 --
 
 INSERT INTO `tbl_learners_details` (`user_id`, `learner_id`, `full_name`, `dob`, `phone_number`, `blood_group`, `photo`, `birth_proof`, `aadhaar_card`, `eye_cert`, `signature`, `package_id`, `application_status`, `payment_status`, `date1`, `date2`, `date3`, `choosed_date`, `test_status`, `dl_test`, `driving_test_status`, `learners_test_status`) VALUES
-(9, 46, 'adu', '2023-11-08', '1165451633', '1', 'img/photo/about-2.jpg', 'img/birth/about-2.jpg', 'img/aadhaar/about-2.jpg', 'img/eye_cert/about-2.jpg', 'img/sig/about-2.jpg', 3, 'Pending', 'Paid', '2023-11-23', '2023-11-21', '2023-11-27', '2023-11-23', 'pending', '2023-11-15', 'PASSED', 'PASSED');
+(11, 49, 'akhil kk', '2023-11-09', '1223333333', '1', 'img/photo/about-1.jpg', 'img/birth/about-1.jpg', 'img/aadhaar/about-1.jpg', 'img/eye_cert/about-1.jpg', 'img/sig/about-1.jpg', 1, 'rejected', 'Paid', '2023-11-23', '2023-11-27', '2023-11-30', 'is processing', 'pending', 'pending', '', '');
 
 -- --------------------------------------------------------
 
@@ -304,15 +300,8 @@ CREATE TABLE `tbl_users` (
 --
 
 INSERT INTO `tbl_users` (`user_id`, `user_name`, `user_email`, `password`) VALUES
-(1, 'arav', 'arav@gmail.com', '123'),
 (2, 'admin', 'admin@gmail.com', 'admin'),
-(3, 'bazil', 'bazil9394@gmail.com', '9394'),
-(4, 'shajan', 'shajan123@gmail.com', '123'),
-(5, 'abc', 'abc@gmail.com', 'abc'),
-(6, 'arav', 'aravindhsunilkumar@gmail.com', '123'),
-(7, 'shajan', 'basilshajan555@gmail.com', '123'),
-(8, 'abc', 'aravindhsunilkumar@gmail.com', '123'),
-(9, 'akhil', 'akhilachu200313@gmail.com', '123');
+(11, 'akhil', 'akhilkk200313@gmail.com', '123');
 
 --
 -- Indexes for dumped tables
@@ -383,7 +372,7 @@ ALTER TABLE `tbl_users`
 -- AUTO_INCREMENT for table `tbl_appointments`
 --
 ALTER TABLE `tbl_appointments`
-  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `appointment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_feedbacks`
@@ -407,7 +396,7 @@ ALTER TABLE `tbl_instructor_time`
 -- AUTO_INCREMENT for table `tbl_learners_details`
 --
 ALTER TABLE `tbl_learners_details`
-  MODIFY `learner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `learner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `tbl_package`
@@ -431,7 +420,7 @@ ALTER TABLE `tbl_timeslot`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
