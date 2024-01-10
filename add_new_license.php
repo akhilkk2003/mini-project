@@ -656,13 +656,13 @@ if (isset($_POST['driving_date'])) {
                     <input type="submit" name="exam_status" value="Update">
                 </form>
             </div>
-            <div style="width: 180%;margin-left: -100px;">
-                <div class="d-flex">
+            <div >
+               
                     <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
                         <center>
                             <h2>Driving Test Date Appointment </h2>
                         </center>
-                        <select class="form-control border-0" name="learner_id" aria-label="Default select example">
+                        <select class="form-control border-0" name="learner_id"  aria-label="Default select example">
 
                             <?php
 
@@ -676,7 +676,7 @@ if (isset($_POST['driving_date'])) {
                         <input type="submit" name="fix_date" value="Fix Date">
                     </form>
 
-                </div>
+                
             </div>
         </div>
 

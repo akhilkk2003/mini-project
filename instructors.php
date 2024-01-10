@@ -83,7 +83,7 @@ function timeSlot()
                 }
 
                 echo '<script>
-                    if (confirm("Doctor availability added successfully. Click OK to continue.")) {
+                    if (confirm("Instructor availability added successfully. Click OK to continue.")) {
                         window.location.href = "instructors.php";
                          }
                 </script>';
@@ -237,7 +237,7 @@ if ($result->num_rows > 0) {
         $instructor_id = $_GET['instructor_id'];
 
         // Get the image path and delete the image file 
-        $get_image_sql = "SELECT instructor-image FROM tbl_instructors WHERE instructor_id = '$instructor_id'";
+        $get_image_sql = "SELECT instructor_image FROM tbl_instructors WHERE instructor_id = '$instructor_id'";
         $image_result = $conn->query($get_image_sql);
         if ($image_result->num_rows === 1) {
             $image_path = $image_result->fetch_assoc()['instructor_image'];
@@ -327,7 +327,7 @@ if ($result->num_rows > 0) {
                         <center>
                             <h3>Instructor Availability</h3>
                         </center>
-                        <label for="coursename">course List:</label>
+                        <!-- <label for="coursename">course List:</label>
                         <select id="service_id" name="coursename" required>
                             <?php
 
@@ -346,7 +346,7 @@ if ($result->num_rows > 0) {
 
 
                             ?>
-                        </select>
+                        </select> -->
                         <br /><br />
 
                         <label for="instructor_id">Select Instructor:</label>
@@ -406,16 +406,12 @@ if ($result->num_rows > 0) {
 "/>
                         <label for="wednesday">Wednesday</label>
 
-                        <input type="checkbox" id="wednesday_morning" name="Wednesday_morning" value="Morning"  style="
-    margin-left: -31px;
-" />
+                        <input type="checkbox" id="wednesday_morning" name="Wednesday_morning" value="Morning"  style="margin-left: -31px;" >
                         <label for="wednesday_morning">Morning</label>
 
                         
 
-                        <input type="checkbox" id="wednesday_evening" name="Wednesday_evening" value="Evening"  style="
-    margin-left: -16px;
-"/>
+                        <input type="checkbox" id="wednesday_evening" name="Wednesday_evening" value="Evening"  style="margin-left: -16px;"/>
                         <label for="wednesday_evening">Evening</label>
                     </div>
                     <div class="checkbox">
@@ -517,7 +513,7 @@ if ($result->num_rows > 0) {
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editModalLabel">Edit Icecream Details</h5>
+                        <h5 class="modal-title" id="editModalLabel">Edit Instructor Details</h5>
                         <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
@@ -533,9 +529,9 @@ if ($result->num_rows > 0) {
                                 var form = `
                                          <form action="" method="post">
                                              <input type="hidden" name="instructor_id" value="${instructorid}">
-                                             <label>Ice Cream Name:</label>
+                                             <label>Instructor Name:</label>
                                              <input type="text" name="instructor_name" value="${instructorname}" required><br>
-                                             <label>Price:</label>
+                                             <label>Status:</label>
                                              <select name="status" required>
                                              <option value="Active">Active</option>
                                              <option value="Inactive">Inactive</option>
